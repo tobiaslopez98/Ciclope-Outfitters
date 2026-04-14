@@ -5,41 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cíclope Outfitters | Streetwear Brand</title>
     <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #fff; color: #000; overflow-x: hidden; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #fff; color: #000; overflow-x: hidden; scroll-behavior: smooth; }
         
-        /* Barra de anuncio negra */
+        /* Barra de anuncio */
         .announcement-bar { background-color: #000; color: #fff; text-align: center; padding: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Header con logo y menú */
+        /* Header */
         header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 100; }
-        .menu-btn { font-size: 24px; cursor: pointer; background: none; border: none; color: #000; padding: 0; }
-        .logo img { height: 45px; display: block; }
-        .cart-icon { font-size: 20px; position: relative; }
+        .menu-btn { font-size: 24px; cursor: pointer; background: none; border: none; color: #000; }
+        .logo img { height: 45px; }
 
-        /* Menú lateral (Sidebar) */
+        /* Menú Lateral */
         .sidebar { position: fixed; left: -100%; width: 85%; height: 100%; background: #fff; transition: 0.4s; z-index: 1000; box-shadow: 2px 0 10px rgba(0,0,0,0.1); padding: 20px; }
         .sidebar.active { left: 0; }
-        .close-btn { font-size: 30px; text-align: right; cursor: pointer; display: block; margin-bottom: 20px; }
         .sidebar-links a { display: block; padding: 15px 0; font-size: 18px; font-weight: 900; text-decoration: none; color: #000; border-bottom: 1px solid #f5f5f5; text-transform: uppercase; }
-        
-        /* Fondo oscuro al abrir menú */
         .overlay { position: fixed; display: none; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,0.5); z-index: 999; }
         .overlay.active { display: block; }
 
-        /* Imagen de Inicio Ajustada */
-        .hero-banner { 
-            width: 100%; 
-            height: 75vh; /* Bajé un poco la altura para que no sea tan gigante */
-            background-image: url('IMG_4586.jpeg'); 
-            background-size: cover; 
-            background-position: center 20%; /* Ajustado para que se vean bien las caras */
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-        
-        /* WhatsApp flotante */
-        .wsp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); text-decoration: none; z-index: 100; }
+        /* Hero Banner */
+        .hero-banner { width: 100%; height: 75vh; background-image: url('IMG_4586.jpeg'); background-size: cover; background-position: center 20%; }
+
+        /* Grilla de Productos */
+        .container { padding: 40px 20px; }
+        .category-title { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; border-left: 4px solid #000; padding-left: 10px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 50px; }
+        .producto { text-align: center; }
+        .producto img { width: 100%; border-radius: 5px; background: #f9f9f9; }
+        .producto p { margin: 5px 0; font-weight: bold; font-size: 14px; }
+        .precio { color: #666; font-size: 13px; }
+
+        .wsp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 100; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -48,31 +43,57 @@
 
     <header>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        <div class="logo">
-            <img src="F3744D24-B4A6-495E-B6C5-611E90566F09.png" alt="CÍCLOPE">
-        </div>
-        <div class="cart-icon">👜 <small style="position:absolute; top:-5px; right:-10px; background:black; color:white; border-radius:50%; padding:2px 5px; font-size:10px;">0</small></div>
+        <div class="logo"><img src="F3744D24-B4A6-495E-B6C5-611E90566F09.png" alt="CÍCLOPE"></div>
+        <div>👜</div>
     </header>
 
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
     <div class="sidebar" id="sidebar">
-        <span class="close-btn" onclick="toggleMenu()">×</span>
+        <span onclick="toggleMenu()" style="font-size:30px; cursor:pointer;">×</span>
         <div class="sidebar-links">
             <a href="#" onclick="toggleMenu()">Inicio</a>
-            <a href="#">Buzos</a>
-            <a href="#">Pantalones</a>
-            <a href="#">Camperas</a>
-            <a href="#">Vestidos</a>
-            <a href="#">Tops</a>
-            <a href="#">Camisas</a>
-            <a href="#" style="font-size: 14px; margin-top: 20px; color: #666;">Contacto</a>
+            <a href="#buzos" onclick="toggleMenu()">Buzos</a>
+            <a href="#pantalones" onclick="toggleMenu()">Pantalones</a>
+            <a href="#camperas" onclick="toggleMenu()">Camperas</a>
+            <a href="#vestidos" onclick="toggleMenu()">Vestidos</a>
+            <a href="#tops" onclick="toggleMenu()">Tops</a>
+            <a href="#camisas" onclick="toggleMenu()">Camisas</a>
         </div>
     </div>
 
     <div class="hero-banner"></div>
 
-    <a href="https://wa.me/5491111111111" class="wsp-float" target="_blank">💬</a>
+    <div class="container">
+        <div id="buzos" class="category-title">Buzos</div>
+        <div class="grid">
+            <div class="producto">
+                <img src="FOTO_BUZO_1.jpg" alt="Buzo">
+                <p>Buzo Hoodie Oversize</p>
+                <div class="precio">$45.000</div>
+            </div>
+            </div>
+
+        <div id="pantalones" class="category-title">Pantalones</div>
+        <div class="grid">
+            <div class="producto">
+                <img src="FOTO_PANTA_1.jpg" alt="Pantalón">
+                <p>Baggy Jeans Cíclope</p>
+                <div class="precio">$55.000</div>
+            </div>
+        </div>
+
+        <div id="camperas" class="category-title">Camperas</div>
+        <div class="grid">
+            <div class="producto">
+                <img src="FOTO_CAMPERA_1.jpg" alt="Campera">
+                <p>Campera Puffer</p>
+                <div class="precio">$80.000</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/TUNUMERO" class="wsp-float" target="_blank">💬</a>
 
     <script>
         function toggleMenu() {
@@ -80,6 +101,5 @@
             document.getElementById("overlay").classList.toggle("active");
         }
     </script>
-
 </body>
 </html>
