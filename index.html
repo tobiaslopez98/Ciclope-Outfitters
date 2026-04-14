@@ -8,12 +8,12 @@
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background-color: #fff; color: #000; overflow-x: hidden; }
         
         /* Barra de anuncio negra */
-        .announcement-bar { background-color: #000; color: #fff; text-align: center; padding: 10px; font-size: 12px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        .announcement-bar { background-color: #000; color: #fff; text-align: center; padding: 10px; font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
         /* Header con logo y menú */
         header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 100; }
-        .menu-btn { font-size: 24px; cursor: pointer; background: none; border: none; color: #000; }
-        .logo img { height: 50px; }
+        .menu-btn { font-size: 24px; cursor: pointer; background: none; border: none; color: #000; padding: 0; }
+        .logo img { height: 45px; display: block; }
         .cart-icon { font-size: 20px; position: relative; }
 
         /* Menú lateral (Sidebar) */
@@ -26,13 +26,16 @@
         .overlay { position: fixed; display: none; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,0.5); z-index: 999; }
         .overlay.active { display: block; }
 
-        /* Imagen de Inicio con tu foto nueva */
+        /* Imagen de Inicio Ajustada */
         .hero-banner { 
             width: 100%; 
-            height: 85vh; 
-            background-image: url('34511f03-6770-4416-9a23-141de408e5df.jpeg'); 
+            height: 75vh; /* Bajé un poco la altura para que no sea tan gigante */
+            background-image: url('IMG_4586.jpeg'); 
             background-size: cover; 
-            background-position: center; 
+            background-position: center 20%; /* Ajustado para que se vean bien las caras */
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
         }
         
         /* WhatsApp flotante */
@@ -56,7 +59,7 @@
     <div class="sidebar" id="sidebar">
         <span class="close-btn" onclick="toggleMenu()">×</span>
         <div class="sidebar-links">
-            <a href="#">Inicio</a>
+            <a href="#" onclick="toggleMenu()">Inicio</a>
             <a href="#">Buzos</a>
             <a href="#">Pantalones</a>
             <a href="#">Camperas</a>
@@ -69,7 +72,7 @@
 
     <div class="hero-banner"></div>
 
-    <a href="https://wa.me/TUNUMERO" class="wsp-float" target="_blank">💬</a>
+    <a href="https://wa.me/5491111111111" class="wsp-float" target="_blank">💬</a>
 
     <script>
         function toggleMenu() {
