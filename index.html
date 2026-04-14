@@ -22,9 +22,8 @@
         .container { padding: 40px 20px; }
         .category-title { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; border-left: 4px solid #000; padding-left: 10px; }
         
-        /* Ajuste para producto único con carrusel */
         .producto-unico { max-width: 500px; margin: 0 auto 50px auto; text-align: center; }
-        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; border-radius: 5px; scrollbar-width: none; }
+        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; border-radius: 5px; scrollbar-width: none; -ms-overflow-style: none; }
         .carousel::-webkit-scrollbar { display: none; }
         .carousel img { width: 100%; flex-shrink: 0; scroll-snap-align: start; background: #f9f9f9; }
         
@@ -53,28 +52,28 @@
         <span onclick="toggleMenu()" style="font-size:30px; cursor:pointer;">×</span>
         <div class="sidebar-links">
             <a href="#" onclick="toggleMenu()">Inicio</a>
-            <a href="#productos" onclick="toggleMenu()">Productos</a>
+            <a href="#buzos-camperas" onclick="toggleMenu()">Buzos/Camperas</a>
             <a href="#remeras" onclick="toggleMenu()">Remeras</a>
-            <a href="#buzos" onclick="toggleMenu()">Buzos</a>
+            <a href="#pantalones" onclick="toggleMenu()">Pantalones</a>
         </div>
     </div>
 
     <div class="hero-banner"></div>
 
     <div class="container">
-        <div id="buzos" class="category-title">Buzos</div>
+        <div id="buzos-camperas" class="category-title">Buzos/Camperas</div>
         
         <div class="producto-unico">
             <div class="carousel">
-                <img src="IMG_1870.webp" alt="Buzo Cíclope Frente">
-                <img src="IMG_1875.webp" alt="Buzo Cíclope Detalle">
+                <img src="IMG_1870.webp" alt="Campera New Day Frente">
+                <img src="IMG_1875.webp" alt="Campera New Day Detalle">
             </div>
-            <p style="font-size: 10px; color: #999; margin-top: 5px;">← Deslizá para ver más fotos →</p>
+            <p style="font-size: 10px; color: #999; margin-top: 5px;">← Deslizá para ver las fotos →</p>
             
             <div class="producto-info">
-                <p>Buzo Hoodie "New Day"</p>
+                <p>Campera "New Day"</p>
                 <div class="precio">$48.000</div>
-                <a href="https://wa.me/TUNUMERO?text=Hola! Me interesa el Buzo New Day" class="btn-comprar" target="_blank">Consultar por WhatsApp</a>
+                <a href="https://wa.me/TUNUMERO?text=Hola! Me interesa la Campera New Day" class="btn-comprar" target="_blank">Consultar por WhatsApp</a>
             </div>
         </div>
 
