@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Cíclope Outfitters</title>
-<style>
-body {
-  font-family: Arial;
-  background: #111;
-  color: white;
-  text-align: center;
-}
-.producto {
-  border: 1px solid #333;
-  margin: 20px;
-  padding: 15px;
-}
-img {
-  width: 200px;
-}
-a {
-  color: #00ffcc;
-  text-decoration: none;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cíclope Outfitters | Streetwear</title>
+    <style>
+        body { font-family: 'Helvetica', Arial, sans-serif; background: #000; color: #fff; margin: 0; text-align: center; }
+        header { padding: 20px; border-bottom: 1px solid #333; position: sticky; top: 0; background: #000; z-index: 1000; }
+        .logo img { width: 120px; height: auto; }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px; overflow-x: auto; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; font-size: 12px; letter-spacing: 1px; }
+        h2 { margin-top: 40px; border-left: 4px solid #fff; display: inline-block; padding-left: 10px; text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
+        .producto { background: #111; padding: 10px; border-radius: 5px; }
+        .producto img { width: 100%; border-radius: 3px; background: #222; min-height: 150px; }
+        .precio { color: #888; margin: 10px 0; }
+        .btn-wsp { background: #25d366; color: #fff; text-decoration: none; padding: 8px; border-radius: 3px; display: block; font-size: 11px; }
+    </style>
 </head>
-
 <body>
 
-<h1>CÍCL OPE OUTFITTERS</h1>
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="CÍCLOPE">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#remeras">REMERAS</a></li>
+            <li><a href="#buzos">BUZOS</a></li>
+            <li><a href="#pantalones">PANTALONES</a></li>
+            <li><a href="#bermudas">BERMUDAS</a></li>
+        </ul>
+    </nav>
+</header>
 
-<div class="producto">
-  <img src="https://via.placeholder.com/200">
-  <h2>Campera Gris Melange</h2>
-  <p>$45.000</p>
-  <a href="https://wa.me/549XXXXXXXXXX">Comprar por WhatsApp</a>
-</div>
+<section id="remeras">
+    <h2>Remeras</h2>
+    <div class="grid">
+        <div class="producto">
+            <img src="remera1.jpg" alt="Remera">
+            <p>Remera Boxy Fit</p>
+            <p class="precio">$25.000</p>
+            <a href="https://wa.me/TUNUMERO" class="btn-wsp">CONSULTAR</a>
+        </div>
+    </div>
+</section>
 
-<div class="producto">
-  <img src="https://via.placeholder.com/200">
-  <h2>Buzo Negro Estampado</h2>
-  <p>$38.000</p>
-  <a href="https://wa.me/549XXXXXXXXXX">Comprar por WhatsApp</a>
-</div>
+<section id="buzos">
+    <h2>Buzos</h2>
+    <div class="grid">
+        <div class="producto">
+            <img src="buzo1.jpg" alt="Buzo">
+            <p>Buzo Hoodie Oversize</p>
+            <p class="precio">$45.000</p>
+            <a href="https://wa.me/TUNUMERO" class="btn-wsp">CONSULTAR</a>
+        </div>
+    </div>
+</section>
+
+<section id="pantalones">
+    <h2>Pantalones</h2>
+    <div class="grid">
+        <div class="producto">
+            <img src="pantalon1.jpg" alt="Pantalon">
+            <p>Pantalon Baggy</p>
+            <p class="precio">$38.000</p>
+            <a href="https://wa.me/TUNUMERO" class="btn-wsp">CONSULTAR</a>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
